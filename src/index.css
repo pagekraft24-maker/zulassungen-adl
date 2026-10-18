@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes card-wiggle {
+  0%, 18%, 100% { transform: rotate(0deg) scale(1); }
+  4%  { transform: rotate(-1.4deg) scale(1.01); }
+  8%  { transform: rotate(1.4deg) scale(1.01); }
+  12% { transform: rotate(-0.8deg) scale(1.005); }
+  16% { transform: rotate(0.4deg) scale(1); }
+}
+
+.card-wiggle-1 {
+  animation: card-wiggle 6s ease-in-out infinite;
+}
+.card-wiggle-2 {
+  animation: card-wiggle 6s ease-in-out infinite 3s;
+}
+.card-wiggle-1:hover,
+.card-wiggle-2:hover {
+  animation-play-state: paused;
+}
