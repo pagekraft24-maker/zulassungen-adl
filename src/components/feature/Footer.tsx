@@ -47,7 +47,7 @@ const Footer = () => {
                   </div>
                 ))}
               </div>
-              <span className="text-white/35 text-xs">5,0 · 137+ Bewertungen</span>
+              <span className="text-white/35 text-xs">5,0 · 157+ Bewertungen</span>
             </div>
 
             {/* Kontakt */}

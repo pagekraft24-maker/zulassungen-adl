@@ -65,7 +65,7 @@ const LeistungDetailPage = () => {
             availability: 'https://schema.org/InStock',
             url: `${BASE_URL}/leistungen/${leistung.slug}`,
           },
-          aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '82' },
+          aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '157' },
         }
       : undefined,
   });

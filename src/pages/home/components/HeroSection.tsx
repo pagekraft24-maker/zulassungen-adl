@@ -247,7 +247,7 @@ const HeroSection = () => {
                   </div>
                 ))}
               </div>
-              <span className="text-white font-bold text-sm">5,0 · 137 Bewertungen</span>
+              <span className="text-white font-bold text-sm">5,0 · 157 Bewertungen</span>
             </div>
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 px-4 py-2 rounded-lg">
               <div className="w-3.5 h-3.5 flex items-center justify-center">

@@ -16,7 +16,7 @@ const BewertungenSection = () => (
                 </div>
               ))}
             </div>
-            <div className="text-white/50 text-xs md:text-sm font-medium">137+ Google-Bewertungen</div>
+            <div className="text-white/50 text-xs md:text-sm font-medium">157+ Google-Bewertungen</div>
           </div>
           {/* Mobile: Google-Button rechts neben Score */}
           <a

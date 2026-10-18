@@ -327,7 +327,7 @@ const VorteilePage = () => {
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: '5.0',
-          reviewCount: '82',
+          reviewCount: '157',
           bestRating: '5',
           worstRating: '1',
           itemReviewed: {
@@ -415,7 +415,7 @@ const VorteilePage = () => {
                   </div>
                 ))}
               </div>
-              <span className="text-white/80 text-xs font-medium">5.0 · 82+ Bewertungen · Google</span>
+              <span className="text-white/80 text-xs font-medium">5.0 · 157+ Bewertungen · Google</span>
             </div>
           </div>
         </section>

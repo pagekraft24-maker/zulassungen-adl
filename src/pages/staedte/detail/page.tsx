@@ -119,7 +119,7 @@ const StadtDetailPage = () => {
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '5.0',
-              reviewCount: '82',
+              reviewCount: '157',
               bestRating: '5',
               worstRating: '1',
             },

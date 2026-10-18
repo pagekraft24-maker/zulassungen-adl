@@ -161,7 +161,7 @@ const KIBanner = () => {
 
     // ZERTIFIZIERUNGEN
     if (t.includes('zertifiziert') || t.includes('tüv') || t.includes('dekra') || t.includes('din') || t.includes('geprüft')) {
-      return 'Wir sind TÜV-geprüft, DEKRA-zertifiziert und DIN-geprüft. Ein zugelassenes Zulassungsunternehmen mit höchsten Qualitätsstandards. 5,0 Sterne Bewertung · 82 Kundenbewertungen.';
+      return 'Wir sind TÜV-geprüft, DEKRA-zertifiziert und DIN-geprüft. Ein zugelassenes Zulassungsunternehmen mit höchsten Qualitätsstandards. 5,0 Sterne Bewertung · 157 Kundenbewertungen.';
     }
 
     // eVB-NUMMER / VERSICHERUNG
@@ -377,7 +377,7 @@ const HomePage = () => {
         { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '15:00', closes: '19:00' },
         { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday'], opens: '12:00', closes: '16:00' },
       ],
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '82' },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '157' },
       '@id': `${BASE_URL}/#business`,
       hasOfferCatalog: {
         '@type': 'OfferCatalog',

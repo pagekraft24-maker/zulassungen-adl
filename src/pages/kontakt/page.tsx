@@ -69,7 +69,7 @@ const KontaktPage = () => {
         { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '15:00', closes: '19:00' },
         { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday'], opens: '12:00', closes: '16:00' },
       ],
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '82' },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '157' },
     },
   });
 

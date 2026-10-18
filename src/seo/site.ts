@@ -50,7 +50,7 @@ export const BUSINESS = {
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '15:00', closes: '19:00' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday'], opens: '12:00', closes: '16:00' },
   ],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '137', bestRating: '5', worstRating: '1' },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '157', bestRating: '5', worstRating: '1' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Leistungen',
