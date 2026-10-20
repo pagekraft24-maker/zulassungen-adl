@@ -1,9 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { leistungen } from '@/mocks/leistungen';
-import {
-  StepLeistung, StepName, StepKontakt, StepFahrzeugInline, StepTerminUpload,
-  initialInlineData, type InlineFormData,
-} from './InlineFormSteps';
+import { StepLeistung, StepKontakt, initialInlineData, type InlineFormData } from './InlineFormSteps';
 
 interface Props {
   serviceSlug: string;
@@ -13,7 +10,7 @@ interface Props {
 
 const FORM_URL = 'https://readdy.ai/api/form/d7nt3kv5qk5pqai6d18g';
 
-const stepLabels = ['Leistung', 'Name', 'Kontakt', 'Fahrzeug', 'Termin'];
+const stepLabels = ['Leistung', 'Kontakt'];
 
 const InlineAnfrageForm = ({ serviceSlug, serviceName, servicePreis }: Props) => {
   const [schritt, setSchritt] = useState(1);
@@ -29,7 +26,7 @@ const InlineAnfrageForm = ({ serviceSlug, serviceName, servicePreis }: Props) =>
 
   const handleNext = () => {
     setSchritt((s) => {
-      if (s >= 5) return s;
+      if (s >= 2) return s;
       return s + 1;
     });
   };
@@ -55,19 +52,7 @@ const InlineAnfrageForm = ({ serviceSlug, serviceName, servicePreis }: Props) =>
         preis: svcPreis,
         vorname: daten.vorname,
         nachname: daten.nachname,
-        kundentyp: daten.kundentyp,
-        firmenname: daten.firmenname,
         telefon: daten.telefon,
-        email: daten.email,
-        plz: daten.plz,
-        kennzeichen: daten.kennzeichen,
-        fahrzeugmarke: daten.fahrzeugmarke,
-        fahrzeugmodell: daten.fahrzeugmodell,
-        fahrzeugeProMonat: daten.fahrzeugeProMonat,
-        erstzulassung: daten.erstzulassung,
-        terminOption: daten.terminOption,
-        wunschtermin: daten.wunschtermin,
-        nachricht: daten.nachricht,
       });
 
       const res = await fetch(FORM_URL, {
@@ -91,15 +76,9 @@ const InlineAnfrageForm = ({ serviceSlug, serviceName, servicePreis }: Props) =>
       case 1:
         return <StepLeistung key="s1" data={daten} onChange={update} onNext={handleNext} />;
       case 2:
-        return <StepName key="s2" data={daten} onChange={update} onNext={handleNext} onBack={handleBack} />;
-      case 3:
-        return <StepKontakt key="s3" data={daten} onChange={update} onNext={handleNext} onBack={handleBack} />;
-      case 4:
-        return <StepFahrzeugInline key="s4" data={daten} onChange={update} onNext={handleNext} onBack={handleBack} />;
-      case 5:
         return (
-          <StepTerminUpload
-            key="s5"
+          <StepKontakt
+            key="s2"
             data={daten}
             onChange={update}
             onBack={handleBack}
@@ -121,7 +100,7 @@ const InlineAnfrageForm = ({ serviceSlug, serviceName, servicePreis }: Props) =>
         <h2 className="text-xl md:text-3xl font-extrabold text-white leading-tight mb-1">
           Jetzt Prozess starten
         </h2>
-        <p className="text-navy-300 text-xs md:text-sm">In 5 kurzen Schritten — dauert unter 2 Minuten.</p>
+        <p className="text-navy-300 text-xs md:text-sm">In 2 kurzen Schritten — dauert unter 1 Minute.</p>
 
         {/* Progress Steps */}
         <div className="flex items-center gap-0 mt-5">
