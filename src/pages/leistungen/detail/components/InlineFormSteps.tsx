@@ -6,6 +6,7 @@ export interface InlineFormData {
   nachname: string;
   telefon: string;
   selectedSlug: string;
+  website: string; // Spam-Falle (unsichtbar)
 }
 
 export const initialInlineData: InlineFormData = {
@@ -13,6 +14,7 @@ export const initialInlineData: InlineFormData = {
   nachname: '',
   telefon: '',
   selectedSlug: '',
+  website: '',
 };
 
 // Hauptleistungen als Kacheln – alle übrigen Leistungen unter „Sonstiges“
@@ -254,6 +256,18 @@ export const StepKontakt = ({ data, onChange, onBack, onSubmit, loading, error }
           </p>
         )}
       </div>
+
+      {/* Spam-Falle: für Menschen unsichtbar */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        value={data.website}
+        onChange={(e) => onChange({ website: e.target.value })}
+        className="absolute -left-[9999px] w-px h-px opacity-0"
+      />
 
       {/* Zusammenfassung */}
       <div className="bg-navy-50 border border-navy-100 rounded-2xl p-4">

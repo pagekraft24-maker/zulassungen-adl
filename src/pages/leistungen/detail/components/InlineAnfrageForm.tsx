@@ -8,7 +8,7 @@ interface Props {
   servicePreis: string;
 }
 
-const FORM_URL = 'https://readdy.ai/api/form/d7nt3kv5qk5pqai6d18g';
+const FORM_URL = '/api/anfrage'; // Vercel-Funktion → Telegram-Bot
 
 const stepLabels = ['Leistung', 'Kontakt'];
 
@@ -47,18 +47,16 @@ const InlineAnfrageForm = ({ serviceSlug, serviceName, servicePreis }: Props) =>
       const svcName = selectedLeistung?.titel || serviceName;
       const svcPreis = selectedLeistung?.preis || servicePreis;
 
-      const body = new URLSearchParams({
-        leistung: svcName,
-        preis: svcPreis,
-        vorname: daten.vorname,
-        nachname: daten.nachname,
-        telefon: daten.telefon,
-      });
-
       const res = await fetch(FORM_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body.toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          leistung: `${svcName} (${svcPreis})`,
+          vorname: daten.vorname,
+          nachname: daten.nachname,
+          telefon: daten.telefon,
+          website: daten.website,
+        }),
       });
 
       if (!res.ok) throw new Error(`Form submission failed with status ${res.status}`);
